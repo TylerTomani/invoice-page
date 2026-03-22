@@ -1,0 +1,7 @@
+body.dark-mode {
+    /* background-color: rgb(52, 47, 47); */
+    background-color: rgb(34, 32, 32);
+    color: whitesmoke;
+}
+body.dark-mode textarea{
+}

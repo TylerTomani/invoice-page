@@ -1,0 +1,13 @@
+@media screen and (max-width: 2400px){
+    body textarea,
+    body input{
+        font-size: 1.4rem;
+    }
+    
+}
+@media screen and (max-width: 720px){
+    body textarea,
+    body input{
+        font-size: .95rem;
+    }
+}

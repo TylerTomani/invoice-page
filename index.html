@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invoice-app-clean</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/main-script.js" defer></script>
+</head>
+<body class="dark-mode">
+    <div class="page-wrapper">
+        <h1>invoice-app-clean</h1>
+        <p style="display:none">
+This is a local-only invoice tool. No data is sent to any server.
+</p>
+        <div class="invoice-container">
+            <div class="invoice-heading">
+                <input id="" 
+                        type="text" 
+                        name="invoice_heading"
+                        value="INVOICE">
+            </div>
+            <div class="to-from-container">
+                <div id="to">
+                    <h3>To</h3>                    
+                    <div class="customer-container">                 
+                        <button autofocus tabindex="0" type="button" id="nameSelectBtn"
+                            style="background:none; padding:0; position:relative; top:2px; float:right; margin:0 1px 0 0; border:0; cursor:pointer;display:none;"><img>
+                        </button>
+                        <select  id="nameSelect" name="nameCustomer">
+                                <option value="0" selected="">New Customer</option>
+                            </optgroup>
+                        </select>
+                        <button id="newCustomerBtn" type="button">➕ New Customer</button>
+                        <input id="newCustomerInput" type="text" placeholder="Enter new customer name" style="display:none; width:100%;" />
+                    </div>
+                    <textarea name="to_address" 
+                              id="toAddress" 
+                              class="invoiceForm_fromNameTD"
+                              rows="4" cols="40">To address
+                    </textarea>
+                    <div class="customer-actions">
+                        <button id="saveCustomerBtn" type="button">➕ Save</button>
+                        <button id="deleteCustomerBtn" type="button">🗑 Delete</button>
+                    </div>
+            
+                </div>
+                <div id="from">
+                    <h3>From</h3>
+                    <!-- from-name -->
+                    <div class="from-name" id="fromName">
+                        <input id="from_name" autocomplete="nope" type="text" name="from_name" value="Hid Oaks Contracting">
+                    </div>
+                    <!-- from-address -->
+                    <textarea name="from_address" id="fromAdress" rows="4" cols="40" class="invoiceForm_fromNameTD"
+                        data-last-active-input="">
+123 Junks rd
+Mandy Spinrgs TX
+Steve Gomani xxx-xxx-xxxx</textarea>
+                </div>
+            </div>
+            <div class="invoice-items-container">
+                <header class="invoice-items-header">
+                    <div class="invoice-num">
+                        <h4>invoice#</h4>
+                        <input  id="invoiceNum" type="number">
+                        <sup>**Allow for this to change invoice # for customer</sup>
+                        <br>if multiple jobs exists
+                    </div>
+                    <div class="dates-container">
+                        <div tabindex="0" id="date">
+                            <h4>date</h4>
+                            <input  autofocus  id="dateDone" type="date">
+                        </div>
+                        <div tabindex="0" id="dueDate">
+                            <h4>due date</h4>
+                            <input id="dateDue" type="date">
+                        </div>
+                    </div>
+                </header>
+                <div class="items-container">
+                    <div class="items-list">
+                        <div tabindex="0" class="item-row" id="itemTable0" >
+                            <div class="item-name">
+                                <h4>Item</h4>
+                                <select name="item[]" id="itemName0" class="inputInvoiceDataItem ">
+                                    <option value="" selected="selected"></option>
+                                    <option value="Days">Days</option>
+                                    <option value="Hours">Hours</option>
+                                    <option value="Product">Product</option>
+                                    <option value="Service">Service</option>
+                                    <option value="Expense">Expense</option>
+                                    <option value="Discount_aynax">Discount</option>
+                                </select>
+                            </div>    
+                            <div class="description">
+                                <h4>Description</h4>
+                                <textarea name="description[]" id="descript0" class="inputInvoiceDataDescription"></textarea>
+                                <!-- <input type="hidden" name="expense_id[]" value="">
+                                <input type="hidden" name="project_id[]" value="0">
+                                <input type="hidden" name="hour_id[]" value="0">
+                                <input type="hidden" class="jPaymentId" name="payment_id[]" value="0"> -->
+                            </div>
+                            <div class="unit-price">
+                                <h4>Unit Price</h4>
+                                <input name="unit_price[]" id="unit_price0" type="number" autocomplete="nope" class="inputInvoiceDataPriceOrQty" value="0.0">
+                            </div>
+                            <div class="quantity">
+                                <h4>quantity</h4>
+                                <input name="qty[]" id="qty0" type="number" step="any" autocomplete="nope" class="inputInvoiceDataPriceOrQty" value="0.0">
+                            </div>
+                            <div class="item-total">
+                                <h4>total</h4>
+                                <input name="total[]" id="itemTotal0" type="number" autocomplete="nope" readonly="" value="0.00">
+                            </div>
+                            <div tabindex="0" anchor="itemTable0" class="delete-item-btn">
+                                <span>x</span>
+                            </div>
+    
+                        </div>            
+                    </div>
+                    <div class="balance">
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>        
+        <button id="darkModeBtn">dark mode</button>
+    </div>
+</body>
+</html>

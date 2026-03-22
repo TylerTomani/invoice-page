@@ -1,0 +1,14 @@
+.items-balance-container{
+    border: 1px solid black;
+}
+/* Global */
+ textarea{
+    border: 1px solid black;
+ }
+/* invoice-items-container */
+ .items-container  { 
+    border: 1px solid blue;
+}
+.invoice-num{
+    border: 1px solid orange
+}

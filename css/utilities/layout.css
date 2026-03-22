@@ -1,0 +1,75 @@
+/* layout.css */
+.page-wrapper{
+    display: flex;
+    flex-direction: column ;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.invoice-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.invoice-heading {
+    align-self: flex-end;
+    display: flex;
+    align-items: flex-end;
+}
+.to-from-container {
+    display: flex;
+    justify-content: space-between;
+}
+.to-from-container>* {
+    flex-basis: 45%;
+}
+#to > .customer-container{
+    display: flex;
+}
+
+/* invoice-items-balance */
+.invoice-items-header { 
+    display: flex; 
+    /* flex-wrap: wrap; */
+    border: 1px solid blue;
+}
+.invoice-items-header > div { 
+    flex-basis: 45%; 
+}
+.invoice-items-header > .dates-container { 
+    display: flex; 
+    flex-wrap: wrap;
+}
+/* items-balance-container*/
+.items-container { display: flex;}  
+.invoice-num{
+    display: flex;
+    flex-direction: column;
+}
+/* items-list */
+.items-list  { 
+    /* display: flex;  */
+    /* flex-direction: column; */
+}
+.items-list > .item-row { 
+    display: flex; 
+}
+.item-row > div{ 
+    flex: 0 0 10%;
+
+}
+/* .item-name {
+    flex-basis: 10%;
+}
+.description {
+    flex-basis: 10%;
+}
+.unit-price {
+    flex-basis: 10%;
+}
+.quantity {
+    flex-basis: 10%;
+}
+.item-total {
+    flex-basis: 10%;
+} */

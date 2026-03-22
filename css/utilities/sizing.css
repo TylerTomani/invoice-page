@@ -1,0 +1,22 @@
+.invoice-container {
+    width: 100%;
+}
+
+.to-from-container {
+    width: 100%;
+}
+.to-from-container>*>textarea {
+    width: 100%;
+    max-width: 400px;
+}
+#darkModeBtn{
+    margin-top: 10%;
+    width: 40%;
+}
+.items-container{
+    width: 100%;
+}
+.item-row > .description > textarea{
+    width: 50%;
+    
+}
